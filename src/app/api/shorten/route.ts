@@ -4,6 +4,17 @@ import { nanoid } from 'nanoid';
 
 export async function POST(request: Request) {
   try {
+    const authHeader = request.headers.get('authorization');
+    const expectedKey = process.env.API_SECRET_KEY;
+
+    if (!expectedKey) {
+      return NextResponse.json({ error: 'API_SECRET_KEY is not configured on the server.' }, { status: 500 });
+    }
+
+    if (authHeader !== `Bearer ${expectedKey}`) {
+      return NextResponse.json({ error: 'Unauthorized. Invalid API Key.' }, { status: 401 });
+    }
+
     const { url } = await request.json();
 
     if (!url) {

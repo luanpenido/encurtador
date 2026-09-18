@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { shortenUrl } from './actions';
 
 export default function Home() {
   const [url, setUrl] = useState('');
@@ -15,21 +16,9 @@ export default function Home() {
     setShortUrl('');
 
     try {
-      const res = await fetch('/api/shorten', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ url }),
-      });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        throw new Error(data.error || 'Failed to shorten URL');
-      }
-
-      setShortUrl(data.shortUrl);
+      const baseUrl = window.location.origin;
+      const resultUrl = await shortenUrl(url, baseUrl);
+      setShortUrl(resultUrl);
     } catch (err: any) {
       setError(err.message);
     } finally {
