@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
-import { nanoid } from 'nanoid';
 
-export async function POST(request: Request) {
+export const revalidate = 0; // Disable cache for this route
+
+export async function GET(request: Request) {
   try {
     const authHeader = request.headers.get('authorization');
     const expectedKey = process.env.API_SECRET_KEY;
@@ -15,32 +16,27 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Unauthorized. Invalid API Key.' }, { status: 401 });
     }
 
-    const { url, title } = await request.json();
-
-    if (!url) {
-      return NextResponse.json({ error: 'URL is required' }, { status: 400 });
-    }
-
-    try {
-      new URL(url);
-    } catch {
-      return NextResponse.json({ error: 'Invalid URL format' }, { status: 400 });
-    }
-
-    const shortId = nanoid(7);
-
-    const { error } = await supabase
+    // Busca os ultimos 50 links ordenados por cliques (decrescente)
+    const { data: links, error, count } = await supabase
       .from('urls')
-      .insert([{ original_url: url, short_id: shortId, title: title || null, clicks: 0 }]);
+      .select('short_id, original_url, title, clicks, created_at', { count: 'exact' })
+      .order('clicks', { ascending: false })
+      .limit(50);
 
     if (error) {
       return NextResponse.json({ error: `Database error: ${error.message}` }, { status: 500 });
     }
 
-    const urlObj = new URL(request.url);
-    const shortUrl = `${urlObj.origin}/${shortId}`;
+    // Adapta o formato da resposta para ficar similar ao que o bot espera
+    const formattedLinks = links.map(link => ({
+      slug: link.short_id,
+      url: link.original_url,
+      title: link.title,
+      clicks: link.clicks,
+      createdAt: link.created_at
+    }));
 
-    return NextResponse.json({ shortUrl }, { status: 201 });
+    return NextResponse.json({ totalLinks: count, links: formattedLinks });
   } catch (error) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
