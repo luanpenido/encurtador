@@ -22,13 +22,16 @@ export async function GET(
     return NextResponse.redirect(new URL('/?error=not_found', request.url));
   }
 
-  // Incrementa os cliques em segundo plano (fire and forget)
-  supabase
-    .from('urls')
-    .update({ clicks: (data.clicks || 0) + 1 })
-    .eq('id', data.id)
-    .then();
+  // Incrementa os cliques com await para garantir a gravação antes do redirecionamento
+  try {
+    await supabase
+      .from('urls')
+      .update({ clicks: (data.clicks || 0) + 1 })
+      .eq('id', data.id);
+  } catch (err) {
+    console.error('Erro ao incrementar cliques:', err);
+  }
 
-  // Usa 307 Temporary Redirect em vez de 301 para evitar cache agressivo no navegador (permite contar os cliques)
+  // Usa 307 Temporary Redirect em vez de 301 para evitar cache agressivo no navegador
   return NextResponse.redirect(data.original_url, 307);
 }

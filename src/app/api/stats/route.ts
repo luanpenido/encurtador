@@ -16,11 +16,12 @@ export async function GET(request: Request) {
       return NextResponse.json({ error: 'Unauthorized. Invalid API Key.' }, { status: 401 });
     }
 
-    // Busca os ultimos 50 links ordenados por cliques (decrescente)
+    // Busca os 50 links ordenados por cliques (decrescente) e por data mais recente
     const { data: links, error, count } = await supabase
       .from('urls')
       .select('short_id, original_url, title, clicks, created_at', { count: 'exact' })
       .order('clicks', { ascending: false })
+      .order('created_at', { ascending: false })
       .limit(50);
 
     if (error) {
@@ -28,11 +29,11 @@ export async function GET(request: Request) {
     }
 
     // Adapta o formato da resposta para ficar similar ao que o bot espera
-    const formattedLinks = links.map(link => ({
+    const formattedLinks = (links || []).map(link => ({
       slug: link.short_id,
       url: link.original_url,
       title: link.title,
-      clicks: link.clicks,
+      clicks: link.clicks || 0,
       createdAt: link.created_at
     }));
 
