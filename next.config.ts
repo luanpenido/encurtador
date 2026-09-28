@@ -40,6 +40,26 @@ const nextConfig: NextConfig = {
         destination: 'http://137.131.210.50:3000/api/instagram/:path*',
       },
       {
+        source: '/api/commands/:path*',
+        destination: 'http://137.131.210.50:3000/api/commands/:path*',
+      },
+      {
+        source: '/api/manual/:path*',
+        destination: 'http://137.131.210.50:3000/api/manual/:path*',
+      },
+      {
+        source: '/api/backups/:path*',
+        destination: 'http://137.131.210.50:3000/api/backups/:path*',
+      },
+      {
+        source: '/api/prices/:path*',
+        destination: 'http://137.131.210.50:3000/api/prices/:path*',
+      },
+      {
+        source: '/api/price-history/:path*',
+        destination: 'http://137.131.210.50:3000/api/price-history/:path*',
+      },
+      {
         source: '/api/settings',
         destination: 'http://137.131.210.50:3000/api/settings',
       },
