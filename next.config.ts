@@ -40,6 +40,10 @@ const nextConfig: NextConfig = {
         destination: 'http://137.131.210.50:3000/api/instagram/:path*',
       },
       {
+        source: '/api/admin/:path*',
+        destination: 'http://137.131.210.50:3000/api/admin/:path*',
+      },
+      {
         source: '/api/commands/:path*',
         destination: 'http://137.131.210.50:3000/api/commands/:path*',
       },
