@@ -336,16 +336,11 @@ export default function VitrineAmazonPage() {
       {/* Hero Section Amazon */}
       <section className="relative overflow-hidden py-10 sm:py-14 border-b border-[#232F3E] bg-gradient-to-b from-[#131921] to-[#0F141C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 border border-amber-400/20 text-amber-300 text-xs font-bold mb-4">
-            <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-            Links Canônicos Diretos com a Tag Oficial {AMAZON_TAG}
-          </div>
-          
           <h2 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto">
             Achadinhos da <span className="text-[#FF9900]">Amazon Brasil</span> com Desconto Real
           </h2>
           
-          <p className="mt-3.5 text-slate-300 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-4 text-slate-300 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Monitoramos quedas de preço relâmpago, cupons e bugs na Amazon. Clique na oferta para abrir diretamente no app ou site oficial da Amazon com segurança.
           </p>
         </div>
@@ -580,9 +575,9 @@ export default function VitrineAmazonPage() {
               </ul>
             </div>
             <div>
-              <h5 className="text-white font-bold text-sm mb-2">Programa de Associados</h5>
+              <h5 className="text-white font-bold text-sm mb-2">Compre com Segurança</h5>
               <p className="text-slate-400 text-xs leading-relaxed">
-                Todos os produtos direcionam para a Amazon Brasil de forma oficial através da tag de associado {AMAZON_TAG}.
+                Todos os produtos direcionam com total segurança para as lojas e produtos oficiais da Amazon Brasil.
               </p>
             </div>
           </div>
