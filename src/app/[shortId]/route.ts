@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server';
+﻿import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
 
 export async function GET(
@@ -8,8 +8,8 @@ export async function GET(
   const resolvedParams = await params;
   const shortId = resolvedParams.shortId;
 
-  if (!shortId) {
-    return NextResponse.redirect(new URL('/', request.url));
+  if (!shortId || shortId === 'encurtar' || shortId === 'painel') {
+    return NextResponse.redirect(new URL('/encurtar', request.url));
   }
 
   const { data, error } = await supabase
@@ -19,10 +19,10 @@ export async function GET(
     .single();
 
   if (error || !data) {
-    return NextResponse.redirect(new URL('/?error=not_found', request.url));
+    return NextResponse.redirect(new URL('/encurtar?error=not_found', request.url));
   }
 
-  // Incrementa os cliques com await para garantir a gravação antes do redirecionamento
+  // Incrementa os cliques com await para garantir a gravacao antes do redirecionamento
   try {
     await supabase
       .from('urls')
