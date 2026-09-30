@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Penido Ofertas & Achadinhos — Promoções Amazon, Mercado Livre e Shopee",
-  description: "Encontre os melhores achadinhos, cupons e ofertas com desconto real da Amazon Brasil, Mercado Livre e Shopee verificados em tempo real.",
+  title: "Penido Achadinhos — Melhores Ofertas & Promoções Amazon Brasil",
+  description: "Vitrine oficial de achadinhos, quedas de preço e cupons verificados da Amazon Brasil. Compre com desconto real e segurança diretamente na Amazon.",
 };
 
 export default function RootLayout({
