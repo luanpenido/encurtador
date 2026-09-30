@@ -1,4 +1,4 @@
-import type { NextConfig } from "next";
+﻿import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   async rewrites() {
@@ -18,6 +18,14 @@ const nextConfig: NextConfig = {
       {
         source: '/app.js',
         destination: 'http://137.131.210.50:3000/app.js',
+      },
+      {
+        source: '/api/deals',
+        destination: 'http://137.131.210.50:3000/api/deals',
+      },
+      {
+        source: '/api/deals/:path*',
+        destination: 'http://137.131.210.50:3000/api/deals/:path*',
       },
       {
         source: '/api/status',
