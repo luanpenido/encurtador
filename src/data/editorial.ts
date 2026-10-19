@@ -50,7 +50,7 @@ export interface GuiaItem {
   conclusao: string[];
 }
 
-export const AMAZON_TAG = 'penido005-20';
+export const AMAZON_TAG = 'luanpenido-20';
 export const WHATSAPP_VIP_LINK = 'https://chat.whatsapp.com/KWSSacbkawP5QDgw79KRfa';
 
 export const REVIEWS_CATALOG: ReviewItem[] = [
