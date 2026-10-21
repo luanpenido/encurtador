@@ -260,7 +260,7 @@ export const REVIEWS_CATALOG: ReviewItem[] = [
     paraQuemNaoE: [
       'Usuários que exigem ANC potente para isolar barulho de turbina de avião'
     ],
-    veredito: 'O QCY T13 entrega uma experiência sonora e estabilidade de conexão que bate de frente com fones que custam o dobro. Se você busca o melhor TWS de entrada, esta é a recomendação oficial do Penido Achadinhos.',
+    veredito: 'O QCY T13 entrega uma experiência sonora e estabilidade de conexão que bate de frente com fones que custam o dobro. Se você busca o melhor TWS de entrada, esta é a recomendação de destaque do Penido Achadinhos.',
     secoes: [
       {
         subtitulo: 'Qualidade de Áudio e Chamadas',
@@ -411,7 +411,7 @@ export const GUIAS_CATALOG: GuiaItem[] = [
     ],
     conclusao: [
       'Para a maioria dos usuários que estão começando na automação residencial, a dobradinha Echo Pop no quarto + Fire TV na sala é a combinação mais inteligente e acessível.',
-      'Aproveite os links verificados acima para adquirir com garantia oficial Amazon Brasil e suporte técnico especializado.'
+      'Aproveite os links verificados acima para adquirir com garantia do fabricante e suporte técnico especializado.'
     ]
   },
   {

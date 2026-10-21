@@ -56,7 +56,7 @@ export default function PoliticaPrivacidadePage() {
         <section className="space-y-3 text-slate-300 text-sm leading-relaxed">
           <h2 className="text-xl font-bold text-white">4. Segurança de Pagamentos e Dados Financeiros</h2>
           <p>
-            O Penido Achadinhos <strong>nunca solicita nem armazena números de cartões de crédito, senhas bancárias ou dados de pagamento</strong>. Todo o processo de finalização de compra, pagamento e faturamento é executado com tecnologia SSL de ponta dentro da plataforma oficial da Amazon Brasil.
+            O Penido Achadinhos <strong>nunca solicita nem armazena números de cartões de crédito, senhas bancárias ou dados de pagamento</strong>. Todo o processo de finalização de compra, pagamento e faturamento é executado com tecnologia SSL de ponta dentro da plataforma segura da Amazon Brasil.
           </p>
         </section>
 

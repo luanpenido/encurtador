@@ -211,15 +211,15 @@ export default function VitrineAmazonPage() {
       <section className="relative overflow-hidden py-12 sm:py-16 border-b border-[#232F3E] bg-gradient-to-b from-[#131921] to-[#0F141C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF9900]/10 border border-[#FF9900]/30 text-[#FF9900] text-xs font-bold">
-            Portal Independente de Avaliações & Ofertas
+            Portal Editorial Independente de Avaliações
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight max-w-4xl mx-auto">
-            Avaliações Sinceras e <span className="text-[#FF9900]">Achadinhos da Amazon</span>
+            Avaliações Sinceras e <span className="text-[#FF9900]">Achadinhos Selecionados</span>
           </h1>
           
           <p className="text-slate-300 text-sm sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Testamos produtos, auditamos o histórico de preços e monitoramos promoções reais na Amazon Brasil com frete grátis Prime e garantia oficial.
+            Testamos produtos, auditamos o histórico de preços e selecionamos as melhores opções com procedência e entrega garantida.
           </p>
 
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
@@ -293,7 +293,7 @@ export default function VitrineAmazonPage() {
           <div>
             <h2 className="text-2xl font-black text-white">Achadinhos do Dia Verificados</h2>
             <p className="text-xs text-slate-400 mt-1">
-              Produtos com queda de preço monitorada e links oficiais da Amazon Brasil
+              Produtos com queda de preço monitorada e links verificados
             </p>
           </div>
 
@@ -351,10 +351,8 @@ export default function VitrineAmazonPage() {
 
                   <div className="p-4 space-y-2">
                     <div className="flex items-center justify-between text-[10px]">
-                      <span className="text-amber-400 font-extrabold">Amazon Brasil</span>
-                      <span className="text-cyan-400 bg-cyan-950/80 px-2 py-0.5 rounded font-black border border-cyan-800/60">
-                        PRIME
-                      </span>
+                      <span className="text-amber-400 font-extrabold">Oferta Verificada</span>
+                      <span className="text-emerald-400 bg-emerald-950/80 px-2 py-0.5 rounded font-black border border-emerald-800/60">DISPONÍVEL</span>
                     </div>
 
                     <h3 className="text-xs font-semibold text-slate-100 line-clamp-2 group-hover:text-[#FF9900] transition-colors">
@@ -391,7 +389,7 @@ export default function VitrineAmazonPage() {
                     rel="noopener noreferrer sponsored"
                     className="w-full py-2.5 px-4 rounded-xl flex items-center justify-center gap-2 text-xs font-black bg-[#FF9900] hover:bg-[#e68a00] text-slate-950 shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
                   >
-                    <span>Comprar na Amazon</span>
+                    <span>Ver Oferta na Loja</span>
                     <span>&rarr;</span>
                   </a>
                 </div>

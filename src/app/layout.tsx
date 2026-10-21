@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Penido Achadinhos — Melhores Ofertas & Promoções Amazon Brasil",
-  description: "Vitrine oficial de achadinhos, quedas de preço e cupons verificados da Amazon Brasil. Compre com desconto real e segurança diretamente na Amazon.",
+  title: "Penido Achadinhos — Reviews, Testes Práticos e Recomendações",
+  description: "Portal independente de análises de produtos, comparativos e curadoria de preços verificados para compras inteligentes online.",
 };
 
 export default function RootLayout({

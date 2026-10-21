@@ -35,7 +35,7 @@ export default function TermosPage() {
             Os preços, estoques, cupons de desconto e condições de frete informados em nossos artigos e vitrine refletem o momento de apuração. A Amazon.com.br opera com precificação dinâmica em tempo real, podendo alterar valores e esgotar unidades a qualquer instante sem aviso prévio.
           </p>
           <p className="p-4 rounded-xl bg-[#131921] border border-[#232F3E] text-xs text-amber-300">
-            <strong>Importante:</strong> O preço válido e vinculante é sempre aquele exibido no carrinho de compras final dentro do site oficial da Amazon Brasil.
+            <strong>Importante:</strong> O preço válido e vinculante é sempre aquele exibido no carrinho de compras final dentro do site da Amazon Brasil.
           </p>
         </section>
 

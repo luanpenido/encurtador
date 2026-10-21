@@ -13,7 +13,7 @@ export default function Header() {
       <div className="bg-[#232F3E] border-b border-[#37475A] text-slate-200 py-2 px-4 text-center text-xs sm:text-sm flex items-center justify-center gap-2">
         <span className="w-2 h-2 rounded-full bg-[#FF9900] animate-ping" />
         <span>
-          <strong>Penido Achadinhos</strong>: Portal independente de análises e promoções verificadas na Amazon Brasil.
+          <strong>Penido Achadinhos</strong>: Portal independente de reviews, análises e curadoria de preços verificados.
         </span>
         <a 
           href={WHATSAPP_VIP_LINK} 
@@ -39,7 +39,7 @@ export default function Header() {
                 Penido <span className="text-[#FF9900]">Achadinhos</span>
               </div>
               <p className="text-[11px] text-slate-400 font-medium hidden sm:block">
-                Avaliações Sinceras & Curadoria Amazon
+                Avaliações Sinceras & Curadoria de Produtos
               </p>
             </div>
           </Link>

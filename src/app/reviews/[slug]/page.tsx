@@ -106,13 +106,13 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
                 rel="noopener noreferrer sponsored"
                 className="w-full py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 font-extrabold text-sm bg-[#FF9900] hover:bg-[#e68a00] text-slate-950 shadow-xl shadow-amber-500/10 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                <span>Ver Preço Atual e Comprar na Amazon</span>
+                <span>Ver Preço Atual e Oferta</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </a>
               <p className="text-[10px] text-slate-500 text-center mt-2">
-                Compra 100% segura com garantia e política de devolução oficial da Amazon Brasil.
+                Compra 100% segura com garantia e política de devolução da Amazon Brasil.
               </p>
             </div>
           </div>
@@ -241,7 +241,7 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
               rel="noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF9900] hover:bg-[#e68a00] text-slate-950 font-black text-sm transition-all"
             >
-              <span>Ver Oferta na Amazon Brasil</span>
+              <span>Ver Oferta na Loja</span>
               <span>&rarr;</span>
             </a>
           </div>

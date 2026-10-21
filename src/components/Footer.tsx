@@ -14,7 +14,7 @@ export default function Footer() {
               <span className="text-[#FF9900]">🏷️ Penido Achadinhos</span>
             </div>
             <p className="text-slate-400 text-xs leading-relaxed">
-              Portal independente especializado em reviews detalhados, testes práticos e curadoria inteligente das melhores ofertas da Amazon Brasil.
+              Portal editorial independente especializado em reviews detalhados, testes práticos e curadoria de produtos recomendados.
             </p>
             <p className="text-[11px] text-slate-500">
               Ajudamos consumidores a economizar com decisões de compra bem informadas.
@@ -89,10 +89,10 @@ export default function Footer() {
           <div className="space-y-3">
             <h5 className="text-white font-bold text-sm mb-2">Compre com Segurança</h5>
             <p className="text-slate-400 text-xs leading-relaxed">
-              Todos os links de compra direcionam com criptografia e segurança diretamente para a loja oficial da <strong className="text-slate-200">Amazon.com.br</strong>.
+              Todos os links de compra direcionam com criptografia e segurança diretamente para a loja verificada da <strong className="text-slate-200">Amazon.com.br</strong>.
             </p>
             <div className="p-3 rounded-lg bg-[#232F3E]/60 border border-[#37475A] text-[11px] text-slate-300">
-              🔒 Seus dados e pagamentos são processados exclusivamente dentro dos servidores seguros da Amazon.
+              🔒 Seus dados e pagamentos são processados com total segurança diretamente no checkout da Amazon.
             </div>
           </div>
         </div>
@@ -100,13 +100,13 @@ export default function Footer() {
         {/* Declaracao Oficial de Afiliado da Amazon */}
         <div className="bg-[#0B0F15] p-5 rounded-xl border border-[#232F3E] text-slate-400 text-[11px] leading-relaxed space-y-2">
           <p className="font-semibold text-slate-200 text-xs">
-            Declaração de Divulgação de Afiliado (Amazon Associates Disclosure):
+            Declaração de Divulgação de Afiliado:
+          </p>
+          <p className="text-slate-300 font-medium">
+            Como participante do Programa de Associados da Amazon, sou remunerado pelas compras qualificadas efetuadas.
           </p>
           <p>
-            O portal <strong className="text-slate-300">Penido Achadinhos</strong> é um participante do <strong>Programa de Associados da Amazon Services LLC</strong>, um programa de publicidade de afiliados projetado para fornecer um meio para que sites ganhem taxas de publicidade divulgando e fornecendo links para produtos no site oficial <em>Amazon.com.br</em>.
-          </p>
-          <p>
-            Como associado da Amazon, recebemos remuneração por compras qualificadas, sem nenhum custo adicional para o comprador. Os preços, disponibilidade em estoque e cupons estão sujeitos a alterações a qualquer momento pela Amazon Brasil.
+            Os preços, disponibilidade de estoque e cupons estão sujeitos a alterações a qualquer momento pelo lojista vendedor sem aviso prévio. As análises e avaliações expressas neste portal refletem nossa opinião editorial independente.
           </p>
         </div>
 
