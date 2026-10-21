@@ -137,6 +137,7 @@ const AMAZON_CATALOG_BASE: AmazonDeal[] = [
 
 export default function VitrineAmazonPage() {
   const [deals, setDeals] = useState<AmazonDeal[]>(AMAZON_CATALOG_BASE);
+  const [activeTag, setActiveTag] = useState<string>(AMAZON_TAG);
   const [selectedCategory, setSelectedCategory] = useState('todos');
   const [searchQuery, setSearchQuery] = useState('');
   const [copiedCoupon, setCopiedCoupon] = useState<string | null>(null);
@@ -325,9 +326,13 @@ export default function VitrineAmazonPage() {
         {/* Grade de Produtos */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {filteredDeals.map((deal) => {
-            const linkWithTag = deal.linkAfiliado.includes('tag=')
-              ? deal.linkAfiliado
-              : `${deal.linkAfiliado}${deal.linkAfiliado.includes('?') ? '&' : '?'}tag=${AMAZON_TAG}`;
+            const currentTag = activeTag || AMAZON_TAG;
+            let linkWithTag = deal.linkAfiliado || '';
+            if (linkWithTag.includes('tag=')) {
+              linkWithTag = linkWithTag.replace(/tag=[^&]+/i, `tag=${currentTag}`);
+            } else {
+              linkWithTag = `${linkWithTag}${linkWithTag.includes('?') ? '&' : '?'}tag=${currentTag}`;
+            }
 
             return (
               <article

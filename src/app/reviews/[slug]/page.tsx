@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import AffiliateButton from '@/components/AffiliateButton';
 import { REVIEWS_CATALOG } from '@/data/editorial';
 
 export async function generateStaticParams() {
@@ -100,17 +101,15 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
             </div>
 
             <div className="pt-2">
-              <a
-                href={review.linkAfiliado}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
+              <AffiliateButton
+                initialUrl={review.linkAfiliado}
                 className="w-full py-3.5 px-6 rounded-xl flex items-center justify-center gap-2 font-extrabold text-sm bg-[#FF9900] hover:bg-[#e68a00] text-slate-950 shadow-xl shadow-amber-500/10 transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 <span>Ver Preço Atual e Oferta</span>
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
-              </a>
+              </AffiliateButton>
               <p className="text-[10px] text-slate-500 text-center mt-2">
                 Compra 100% segura com garantia e política de devolução da Amazon Brasil.
               </p>
@@ -235,15 +234,13 @@ export default async function ReviewDetailPage({ params }: { params: Promise<{ s
           </p>
 
           <div className="pt-2">
-            <a
-              href={review.linkAfiliado}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
+            <AffiliateButton
+              initialUrl={review.linkAfiliado}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#FF9900] hover:bg-[#e68a00] text-slate-950 font-black text-sm transition-all"
             >
               <span>Ver Oferta na Loja</span>
               <span>&rarr;</span>
-            </a>
+            </AffiliateButton>
           </div>
         </section>
 
